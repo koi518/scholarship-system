@@ -2,18 +2,77 @@
 <html lang="zh-CN">
 <head>
     <meta charset="UTF-8">
-    <title>助学金评定系统</title>
-    <link rel="stylesheet" href="/css/common.css">
+    <title>助学金评定管理系统</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Microsoft YaHei", sans-serif;
+        }
+
+        body {
+            background-color: #f5f7fa;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .container {
+            width: 420px;
+            background: #fff;
+            padding: 40px;
+            border-radius: 16px;
+            box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+            text-align: center;
+        }
+
+        .title {
+            font-size: 24px;
+            color: #2d8cf0;
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+
+        .subtitle {
+            color: #666;
+            margin-bottom: 35px;
+        }
+
+        .btn {
+            display: block;
+            width: 100%;
+            padding: 14px;
+            margin: 12px 0;
+            background: #2d8cf0;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: 0.2s;
+        }
+
+        .btn:hover {
+            background: #1b74d1;
+        }
+
+        .btn-secondary {
+            background: #57a3f3;
+        }
+    </style>
 </head>
 <body>
-    <div class="box">
-        <h2>助学金评定管理系统</h2>
-        <div>
-            <p>欢迎进入系统，请选择对应功能操作</p>
-            <br>
-            <button onclick="location.href='apply.html'">助学金申请</button>
-            <button onclick="location.href='check.html'" style="margin-left:10px">审核管理</button>
-        </div>
-    </div>
+
+<div class="container">
+    <div class="title">助学金评定管理系统</div>
+    <div class="subtitle">Scholarship Management System</div>
+
+    <button class="btn" onclick="location.href='apply.html'">助学金申请</button>
+    <button class="btn btn-secondary" onclick="location.href='list.html'">申请列表查看</button>
+    <button class="btn" onclick="location.href='check.html'" style="background:#ff7d00;">管理员审核中心</button>
+</div>
+
 </body>
 </html>

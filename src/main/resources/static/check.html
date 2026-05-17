@@ -2,33 +2,101 @@
 <html lang="zh-CN">
 <head>
     <meta charset="UTF-8">
-    <title>申请审核</title>
-    <link rel="stylesheet" href="/css/common.css">
+    <title>审核管理页面</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Microsoft YaHei", sans-serif;
+        }
+        body {
+            background: #f5f7fa;
+            padding: 40px 20px;
+        }
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        h2 {
+            text-align: center;
+            color: #2d8cf0;
+            margin-bottom: 30px;
+        }
+        .back-btn {
+            padding: 10px 20px;
+            background: #2d8cf0;
+            color: #fff;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            margin-bottom: 20px;
+        }
+        .audit-card {
+            background: #fff;
+            padding: 25px;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+            margin-bottom: 18px;
+        }
+        .info-item {
+            margin: 10px 0;
+            font-size: 15px;
+        }
+        .info-item span:first-child {
+            color: #666;
+            width: 80px;
+            display: inline-block;
+        }
+        .btn-group {
+            margin-top: 20px;
+            display: flex;
+            gap: 15px;
+        }
+        .pass {
+            padding: 8px 20px;
+            background: #00b42a;
+            color: white;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+        }
+        .refuse {
+            padding: 8px 20px;
+            background: #f53f3f;
+            color: white;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+        }
+    </style>
 </head>
 <body>
-    <div class="box">
-        <h2>助学金申请审核列表</h2>
-        <table>
-            <tr>
-                <th>学号</th>
-                <th>姓名</th>
-                <th>班级</th>
-                <th>申请状态</th>
-                <th>操作</th>
-            </tr>
-            <tr>
-                <td>2026001</td>
-                <td>张三</td>
-                <td>软工三班</td>
-                <td>待审核</td>
-                <td>
-                    <button>通过</button>
-                    <button style="background:#f56c6c;margin-left:5px">驳回</button>
-                </td>
-            </tr>
-        </table>
-        <br>
-        <button onclick="history.back()" style="background:#999">返回首页</button>
+<div class="container">
+    <button class="back-btn" onclick="location.href='index.html'">返回首页</button>
+    <h2>助学金申请审核中心</h2>
+
+    <div class="audit-card">
+        <div class="info-item"><span>学生姓名：</span><span>王同学</span></div>
+        <div class="info-item"><span>学生学号：</span><span>20260517</span></div>
+        <div class="info-item"><span>申请金额：</span><span>3000元</span></div>
+        <div class="info-item"><span>申请理由：</span><span>家庭经济条件较差，日常生活费紧张，申请校园助学金补助。</span></div>
+        <div class="btn-group">
+            <button class="pass">审核通过</button>
+            <button class="refuse">驳回申请</button>
+        </div>
     </div>
+
+    <div class="audit-card">
+        <div class="info-item"><span>学生姓名：</span><span>陈同学</span></div>
+        <div class="info-item"><span>学生学号：</span><span>20260208</span></div>
+        <div class="info-item"><span>申请金额：</span><span>2000元</span></div>
+        <div class="info-item"><span>申请理由：</span><span>在校表现良好，无不良记录，希望获得助学金减轻家里负担。</span></div>
+        <div class="btn-group">
+            <button class="pass">审核通过</button>
+            <button class="refuse">驳回申请</button>
+        </div>
+    </div>
+</div>
 </body>
 </html>

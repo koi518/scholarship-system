@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>申请列表</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Microsoft YaHei", sans-serif;
+        }
+        body {
+            background: #f5f7fa;
+            padding: 40px 20px;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        .title {
+            text-align: center;
+            color: #2d8cf0;
+            margin-bottom: 30px;
+        }
+        .card {
+            background: #fff;
+            padding: 24px;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+            margin-bottom: 16px;
+        }
+        .row {
+            display: flex;
+            margin-bottom: 8px;
+        }
+        .label {
+            width: 90px;
+            color: #666;
+        }
+        .back-btn {
+            padding: 12px 24px;
+            background: #2d8cf0;
+            color: #fff;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <button class="back-btn" onclick="location.href='index.html'">返回首页</button>
+    <h2 class="title">助学金申请列表</h2>
+
+    <div class="card">
+        <div class="row"><span class="label">姓名：</span><span>张三</span></div>
+        <div class="row"><span class="label">学号：</span><span>2025001</span></div>
+        <div class="row"><span class="label">状态：</span><span style="color:#2d8cf0">审核中</span></div>
+    </div>
+
+    <div class="card">
+        <div class="row"><span class="label">姓名：</span><span>李四</span></div>
+        <div class="row"><span class="label">学号：</span><span>2025002</span></div>
+        <div class="row"><span class="label">状态：</span><span style="color:#00b42a">已通过</span></div>
+    </div>
+</div>
+</body>
+</html>

@@ -3,24 +3,108 @@
 <head>
     <meta charset="UTF-8">
     <title>助学金申请</title>
-    <link rel="stylesheet" href="/css/common.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Microsoft YaHei", sans-serif;
+        }
+
+        body {
+            background: #f5f7fa;
+            padding: 40px 20px;
+        }
+
+        .box {
+            max-width: 600px;
+            margin: 0 auto;
+            background: white;
+            padding: 40px;
+            border-radius: 16px;
+            box-shadow: 0 6px 20px rgba(0,0,0,0.06);
+        }
+
+        h2 {
+            text-align: center;
+            color: #2d8cf0;
+            margin-bottom: 30px;
+        }
+
+        .form-item {
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+            color: #333;
+            font-weight: 500;
+        }
+
+        input, textarea {
+            width: 100%;
+            padding: 12px 14px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            font-size: 15px;
+        }
+
+        textarea {
+            min-height: 100px;
+        }
+
+        .btn-wrap {
+            display: flex;
+            gap: 12px;
+            margin-top: 30px;
+        }
+
+        button {
+            flex: 1;
+            padding: 14px;
+            border: none;
+            border-radius: 8px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        .submit {
+            background: #2d8cf0;
+            color: white;
+        }
+
+        .back {
+            background: #eee;
+            color: #333;
+        }
+    </style>
 </head>
 <body>
-    <div class="box">
-        <h2>学生助学金申请</h2>
-        <form>
-            <input type="text" placeholder="请输入学生姓名">
-            <input type="text" placeholder="请输入学号">
-            <input type="text" placeholder="所在班级">
-            <select>
-                <option>贫困等级</option>
-                <option>一般贫困</option>
-                <option>特困</option>
-            </select>
-            <input type="text" placeholder="申请理由">
-            <button type="button">提交申请</button>
-            <button type="button" onclick="history.back()" style="background:#999;margin-left:10px">返回</button>
-        </form>
+
+<div class="box">
+    <h2>助学金申请表</h2>
+
+    <div class="form-item">
+        <label>姓名</label>
+        <input type="text" placeholder="请输入姓名">
     </div>
+
+    <div class="form-item">
+        <label>学号</label>
+        <input type="text" placeholder="请输入学号">
+    </div>
+
+    <div class="form-item">
+        <label>申请理由</label>
+        <textarea placeholder="请简要说明申请原因"></textarea>
+    </div>
+
+    <div class="btn-wrap">
+        <button class="back" onclick="history.back()">返回</button>
+        <button class="submit">提交申请</button>
+    </div>
+</div>
+
 </body>
 </html>
